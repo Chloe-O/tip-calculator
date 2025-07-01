@@ -9,7 +9,25 @@
   <body>
     <div id="container">
       <h1>Tip Calculator</h1>
-      
+      <div class="form-wrap">
+        <div class="left">
+           <form action="" class="tip-calculator">
+            <label for="bill-amount">Bill</label>
+            <input type="number" name="bill-amount">
+<div id="selectTip">
+    <button class="tip-btn" type="button" value="5">5%</button>
+    <button class="tip-btn" type="button" value="10">10%</button>
+    <button class="tip-btn" type="button" value="15">15%</button>
+    <button class="tip-btn" type="button" value="25">25%</button>
+    <button class="tip-btn" type="button" value="50">50%</button>
+    <input type="number" placeholder="custom">
+</div>
+            <label for="num-of-people">Number of People</label>
+            <input type="number" name="num-of-people">
+           </form>
+        </div>
+        <div class="right"></div>
+      </div>
     </div>
     <script src="/app.js"></script>
   </body>

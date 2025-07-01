@@ -1,0 +1,47 @@
+/*Variables*/
+
+$primary: #1c4649;
+$secondary: #cbe3e6;
+$accent: #5ec0ae;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: $secondary;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  margin: 50px 30px 30px 30px;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(#000, 0.3);
+  border-radius: 10px;
+
+  h1 {
+    text-align: center;
+    line-height: 1;
+    margin: 0 0 30px 0;
+    font-size: 28px;
+    color: $primary;
+  }
+
+  .form-wrap {
+    .left {
+
+    }
+
+    .right {
+        
+    }
+  }
+}
