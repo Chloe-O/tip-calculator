@@ -13,7 +13,7 @@ let billTotal;
 
 function calculateTotalBill(tip) {
   billTotal = (tip * billAmount + billAmount).toFixed(2);
-  console.log(billTotal);
+  return billTotal;
 }
 
 function checkTipByClick() {
@@ -23,19 +23,19 @@ function checkTipByClick() {
       customTip.value = "";
       customTipAmount = "";
 
-      console.log(selectTipAmount);
       calculateTotalBill(selectTipAmount);
+      displayTotal.innerText = billTotal;
     }
   });
 }
 
 function checkTipByCustom() {
   customTip.addEventListener("input", () => {
-    displayTotal.textContent = customTip.value;
-    customTipAmount = customTip.value / 100;
+    customTipAmount = Number(customTip.value);
     selectTipAmount = "";
 
-    // calculateTotalBill(customTip, billAmount);
+    calculateTotalBill(customTipAmount);
+    console.log(billTotal);
   });
 }
 
@@ -49,7 +49,4 @@ function getBillInput() {
   });
 }
 
-function displayTotalBill() {}
-
 getBillInput();
-displayTotalBill();
