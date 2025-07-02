@@ -6,28 +6,50 @@ let displayTotal = document.getElementById("displayTotal");
 
 let selectTipAmount;
 let customTipAmount;
-let billAmount;
+let billAmount = 0;
+let billTotal;
+
+/*NEXT -> hook up calc bill to customer tip box, then display the bill on the right hand side */
+
+function calculateTotalBill(tip) {
+  billTotal = (tip * billAmount + billAmount).toFixed(2);
+  console.log(billTotal);
+}
 
 function checkTipByClick() {
   selectTip.addEventListener("click", (e) => {
     if (e.target.classList.contains("tip-btn")) {
-      selectTipAmount = e.target.value;
+      selectTipAmount = Number(e.target.value);
       customTip.value = "";
-    };
+      customTipAmount = "";
+
+      console.log(selectTipAmount);
+      calculateTotalBill(selectTipAmount);
+    }
   });
 }
 
 function checkTipByCustom() {
   customTip.addEventListener("input", () => {
-    displayTotal.textContent = customTip.value.toFixed;
-    customTipAmount = customTip.value;
-    console.log(`The value of customTipAmount is ${customTipAmount}`);
+    displayTotal.textContent = customTip.value;
+    customTipAmount = customTip.value / 100;
+    selectTipAmount = "";
+
+    // calculateTotalBill(customTip, billAmount);
   });
-};
-
-function calculateTotalBill() {
-
 }
 
 checkTipByClick();
 checkTipByCustom();
+
+function getBillInput() {
+  billInput.addEventListener("input", () => {
+    billAmount = Number(billInput.value);
+    return billAmount;
+  });
+}
+
+function displayTotalBill() {}
+
+getBillInput();
+displayTotalBill();
