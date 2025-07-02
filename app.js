@@ -19,7 +19,7 @@ function checkTipByClick() {
 
 function checkTipByCustom() {
   customTip.addEventListener("input", () => {
-    testBox.textContent = customTip.value;
+    displayTotal.textContent = customTip.value.toFixed;
     customTipAmount = customTip.value;
     console.log(`The value of customTipAmount is ${customTipAmount}`);
   });

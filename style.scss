@@ -52,6 +52,27 @@ body {
     .left {
       padding: 15px;
       flex: 1 1 0px;
+
+      #selectTip {
+        margin: 10px 0 0 0;
+        .tip-btn {
+          background: $primary;
+          border-radius: 3px;
+          color: #fff;
+          padding: 0.5em;
+          font-size: 20px;
+          border: none;
+        }
+
+        #customTipInput {
+          background: #fff;
+          border: 1px solid $secondary;
+          padding: 0.5em;
+          font-size: 20px;
+          border-radius: 10px;
+          margin: 10px 0 0 0;
+        }
+      }
     }
 
     .right {
